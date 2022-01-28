@@ -2,13 +2,14 @@ import './App.css';
 import { useState } from 'react';
 import IsClosed from './IsClosed';
 import IsOpen from './IsOpen';
+import RenderMonsterArr from './RenderMonsterArr';
 
 function App() {
   const [cthulhuSize, setCthulhuSize] = useState(1);
   const [spaghettiSize, setSpaghettiSize] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
   const [isClosed, setIsClosed] = useState(false);
-  // const [monsterParade, setMonsterParade] = useState('pink', 'orange', 'cyan');
+  const [monsterParade, setMonsterParade] = useState(['pink', 'orange', 'cyan']);
 
   const cSizeRefactor = (cthulhuSize * 5) + 45;
   const sSizeRefactor = (spaghettiSize * 5) + 45;
@@ -20,6 +21,30 @@ function App() {
   const spaghettiStyle = {
     width: `${sSizeRefactor}px`
   };
+
+  function handleCyanMonster(){
+    setMonsterParade([...monsterParade, `cyan`]);
+  }
+
+  function handleGreenMonster(){
+    setMonsterParade([...monsterParade, `green`]);
+  }
+
+  function handleOrangeMonster(){
+    setMonsterParade([...monsterParade, `orange`]);
+  }
+
+  function handlePinkMonster(){
+    setMonsterParade([...monsterParade, `pink`]);
+  }
+
+  function handleRedMonster(){
+    setMonsterParade([...monsterParade, `red`]);
+  }
+
+  function handleYellowMonster(){
+    setMonsterParade([...monsterParade, `yellow`]);
+  }
 
   return (
     <div className='zoo'>
@@ -44,9 +69,7 @@ function App() {
       <section className='on-off-container'>
         <div className='sign-container'>
           <IsOpen open={isOpen} />
-          {/* <div className='open'>OPEN</div> */}
           <IsClosed closed={isClosed} />
-          {/* <div className='closed on'>CLOSED</div> */}
         </div>
         <div className='button-container'>
           <button className='open-button' onClick={() => {setIsOpen(true); setIsClosed(false);}}>open</button>
@@ -54,18 +77,25 @@ function App() {
         </div>
       </section>
       <section className='monster-parade'>
-        <div className='parade-div'></div>
+        <div className='parade-div'>
+          { 
+            monsterParade.map((monster, i) => <RenderMonsterArr key={`${monster}${i}`} monsterArr={monster} />)
+          }
+        </div>
         <div className='button-div'>
-          <button className='cyan'></button>
-          <button className='green'></button>
-          <button className='orange'></button>
-          <button className='pink'></button>
-          <button className='red'></button>
-          <button className='yellow'></button>
+          <button className='cyan' onClick={handleCyanMonster}>cyan monster</button>
+          <button className='green' onClick={handleGreenMonster}>green monster</button>
+          <button className='orange' onClick={handleOrangeMonster}>orange monster</button>
+          <button className='pink' onClick={handlePinkMonster}>pink monster</button>
+          <button className='red' onClick={handleRedMonster}>red monster</button>
+          <button className='yellow' onClick={handleYellowMonster}>yellow monster</button>
         </div>
       </section>
     </div>
   );
+
+  
 }
+
 
 export default App;
