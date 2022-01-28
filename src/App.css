@@ -1,17 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
 :root {
-  /* reds */
-  --red: #FF0000;
-  --light-red: #FF8080;
-  --dark-red: #A60000;
-  --black-red: #330000;
-
+  /* cyans */
+  --cyan: #00FFFF;
+  --light-cyan: #80FFFF;
+  --dark-cyan: #00BFBF;
+  --black-cyan: #004040;
+  
   /* greens */
   --green: #11FF00;
   --light-green: #88FF80;
   --dark-green: #0BA600;
   --black-green: #033300;
+  
+  /* oranges */
+  --orange: #FFA500;
+  --light-orange: #FFD280;
+  --dark-orange: #BF7C00;
+  --black-orange: #402900;
+  
+  /* pinks */
+  --pink: #FF69B4;
+  --light-pink: #FFE8F4;
+  --dark-pink: #BF4E87;
+  --black-pink: #401A2D;
+  
+  /* reds */
+  --red: #FF0000;
+  --light-red: #FF8080;
+  --dark-red: #A60000;
+  --black-red: #330000;
+  
+  /* yellows */
+  --yellow: #FFFF00;
+  --light-yellow: #FFFF80;
+  --dark-yellow: #BFBF00;
+  --black-yellow: #404000;
 }
 
 body{
@@ -202,10 +227,146 @@ button{
   background-color: var(--dark-red);
 }
 
+.glow-green{
+  box-shadow:
+    0 0 60px 10px var(--green), 
+    inset 0 0 60px 10px var(--green);  
+  text-shadow: 
+    0 0 60px var(--green);
+}
+
+.glow-red{
+  box-shadow:
+    0 0 60px 10px var(--red), 
+    inset 0 0 60px 10px var(--red);  
+  text-shadow: 
+    0 0 60px var(--red);
+}
+
 .monster-parade{
   background-image: url('./background-image/stadium-croped.png');
   height: 300px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.parade-div{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-div{
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.monster{
+  width: 50px;
+  margin-right: 10px;
+}
+
+.button-div button{
+  width: 175px;
+  height: 45px;
+  font-family: 'Creepster', cursive;
+  font-size: 1.5rem;
+}
+
+.cyan{
+  color: var(--dark-cyan);
+  background-color: var(--cyan);
+}
+
+.cyan:hover{
+  color: var(--dark-cyan);
+  background-color: var(--light-cyan);
+}
+
+.cyan:active{
+  color: var(--cyan);
+  background-color: var(--dark-cyan);
+}
+
+.green{
+  color: var(--dark-green);
+  background-color: var(--green);
+}
+
+.green:hover{
+  color: var(--dark-green);
+  background-color: var(--light-green);
+}
+
+.green:active{
+  color: var(--green);
+  background-color: var(--dark-green);
+}
+
+.orange{
+  color: var(--dark-orange);
+  background-color: var(--orange);
+}
+
+.orange:hover{
+  color: var(--dark-orange);
+  background-color: var(--light-orange);
+}
+
+.orange:active{
+  color: var(--orange);
+  background-color: var(--dark-orange);
+}
+
+.pink{
+  color: var(--dark-pink);
+  background-color: var(--pink);
+}
+
+.pink:hover{
+  color: var(--dark-pink);
+  background-color: var(--light-pink);
+}
+
+.pink:active{
+  color: var(--pink);
+  background-color: var(--dark-pink);
+}
+
+.red{
+  color: var(--dark-red);
+  background-color: var(--red);
+}
+
+.red:hover{
+  color: var(--dark-red);
+  background-color: var(--light-red);
+}
+
+.red:active{
+  color: var(--red);
+  background-color: var(--dark-red);
+}
+
+.yellow{
+  color: var(--dark-yellow);
+  background-color: var(--yellow);
+}
+
+.yellow:hover{
+  color: var(--dark-yellow);
+  background-color: var(--light-yellow);
+}
+
+.yellow:active{
+  color: var(--yellow);
+  background-color: var(--dark-yellow);
 }
