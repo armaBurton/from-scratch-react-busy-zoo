@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+:root {
+  /* reds */
+  --red: #FF0000;
+  --light-red: #FF8080;
+  --dark-red: #A60000;
+  --black-red: #330000;
+
+  /* greens */
+  --green: #11FF00;
+  --light-green: #88FF80;
+  --dark-green: #0BA600;
+  --black-green: #033300;
+}
+
+body{
+  background-color: darkgray;
+}
+
+.zoo{
+  width: 100%;
+  height: 100%;
+}
+
+.tentacle-battle{
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 50px;
+  background-image: url('./background-image/orbit.png');
+  background-size: cover;
+}
+
+.monster-holder{
+  width: 400px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgba(39, 39, 39, 0.575);
+}
+
+.monster-holder img{
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.monster-buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.monster-buttons button{
+  width: 200px;
+  height: 35px;
+  font-family: 'Slackey', cursive;
+  font-size: 1rem;
+}
+
+.monster-name{
+  font-family: 'Slackey', cursive;
+  color: var(--green);
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.make-strong{
+  color: var(--dark-green);
+  background-color: var(--green);
+}
+
+.make-strong:hover{
+  background-color: var(--light-green);
+}
+
+.make-strong:active{
+  background-color: var(--dark-green);
+  color: var(--green);
+}
+
+.attack-enemy{
+  color: var(--dark-red);
+  background-color: var(--red);
+}
+
+.attack-enemy:hover{
+  color: var(--red);
+  background-color: var(--light-red);
+}
+
+.attack-enemy:active{
+  color: var(--red);
+  background-color: var(--dark-red);
+}
+
+.on-off-container{
+  height: 600px;
+  width: 100%;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(5, 5, 5, 0.5)), url('./background-image/store-front.png');
+  background-position: center;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Dongle', sans-serif;
+}
+
+.sign-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.open, .closed{
+  font-family: 'Dongle', sans-serif;
+  color: var(--green);
+  font-size: 30rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  padding-top: 70px;
+  height: 450px;
+  width: 1255px;
+  border: 20px solid var(--green);
+  border-radius: 30px;
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+}
+
+.closed{
+  color: var(--red);
+  border: 20px solid var(--red);
+}
+
+.open, .closed{
+  opacity: 0.2;
+}
+
+.on{
+  opacity: 0.8;
+  z-index: 10;
+}
+
+.button-container{
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.open-button, .closed-button{
+  font-family: 'Dongle', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 45px;
+  font-size: 3rem;
+  padding-top: 5px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+button{
+  cursor: pointer;
+}
+
+.open-button{
+  color: var(--dark-green);
+  background-color: var(--green);
+}
+
+.open-button:hover{
+  background-color: var(--light-green);
+}
+
+.open-button:active{
+  background-color: var(--dark-green);
+  color: var(--green);
+}
+
+.closed-button{
+  color: var(--dark-red);
+  background-color: var(--red);
+}
+
+.attack-enemy:hover{
+  color: var(--red);
+  background-color: var(--light-red);
+}
+
+.attack-enemy:active{
+  color: var(--red);
+  background-color: var(--dark-red);
+}
+
+.monster-parade{
+  background-image: url('./background-image/stadium-croped.png');
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
