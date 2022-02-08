@@ -22,28 +22,8 @@ function App() {
     width: `${sSizeRefactor}px`
   };
 
-  function handleCyanMonster(){
-    setMonsterParade([...monsterParade, `cyan`]);
-  }
-
-  function handleGreenMonster(){
-    setMonsterParade([...monsterParade, `green`]);
-  }
-
-  function handleOrangeMonster(){
-    setMonsterParade([...monsterParade, `orange`]);
-  }
-
-  function handlePinkMonster(){
-    setMonsterParade([...monsterParade, `pink`]);
-  }
-
-  function handleRedMonster(){
-    setMonsterParade([...monsterParade, `red`]);
-  }
-
-  function handleYellowMonster(){
-    setMonsterParade([...monsterParade, `yellow`]);
+  function handleMonster(color){
+    setMonsterParade([...monsterParade, color]);
   }
 
   return (
@@ -78,17 +58,18 @@ function App() {
       </section>
       <section className='monster-parade'>
         <div className='parade-div'>
-          { 
+          <RenderMonsterArr monsterParade={monsterParade} />
+          {/* { 
             monsterParade.map((monster, i) => <RenderMonsterArr key={`${monster}${i}`} monsterArr={monster} />)
-          }
+          } */}
         </div>
         <div className='button-div'>
-          <button className='cyan' onClick={handleCyanMonster}>cyan monster</button>
-          <button className='green' onClick={handleGreenMonster}>green monster</button>
-          <button className='orange' onClick={handleOrangeMonster}>orange monster</button>
-          <button className='pink' onClick={handlePinkMonster}>pink monster</button>
-          <button className='red' onClick={handleRedMonster}>red monster</button>
-          <button className='yellow' onClick={handleYellowMonster}>yellow monster</button>
+          <button className='cyan' onClick={() => handleMonster('cyan')}>cyan monster</button>
+          <button className='green' onClick={() => handleMonster('green')}>green monster</button>
+          <button className='orange' onClick={() => handleMonster('orange')}>orange monster</button>
+          <button className='pink' onClick={() => handleMonster('pink')}>pink monster</button>
+          <button className='red' onClick={() => handleMonster('red')}>red monster</button>
+          <button className='yellow' onClick={() => handleMonster('yellow')}>yellow monster</button>
         </div>
       </section>
     </div>
