@@ -1,5 +1,8 @@
-export default function RenderMonsterArr(props) {
-  return <>
-    <img className='monster' src={`/${props.monsterArr}.png`} />
-  </>;
+import Parade from './Parade';
+
+export default function RenderMonsterArr(props){
+  return props.monsterParade.map((monster, i) => 
+    <Parade key={monster + i} monster={monster} />
+  );
+
 }
