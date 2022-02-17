@@ -8,6 +8,6 @@ test('should add a color to the array when monster button is clicked', async () 
   fireEvent.click(greenMonsterButton);
   
   const greenMonster = await screen.findByAltText(`green monster`);
-  expect(greenMonster.alt).toBe('green monster');
+  expect(greenMonster.src).toBe('http://localhost/green.png');
 
 });
