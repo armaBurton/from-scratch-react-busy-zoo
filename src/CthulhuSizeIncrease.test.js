@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
-test('', async () => {
+test('Cthulhu size should increase when the Make Stronger button is clicked', async () => {
   render(<App />);
   const cthulhuSizeIncreaseButton = screen.getByText('Make Stronger');
 
