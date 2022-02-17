@@ -30,7 +30,7 @@ function App() {
     <div className='zoo'>
       <section className='tentacle-battle'>
         <div className='monster-holder'>
-          <img style={cthulhuStyle} className='cthulhu' src='/cthulhu.png'/>
+          <img style={cthulhuStyle} className='cthulhu' alt="cthulhu" src='/cthulhu.png'/>
           <div className='monster-buttons'>
             <button className='make-strong' onClick={() => setCthulhuSize(cthulhuSize + 1)}>Make Stronger</button>
             <button className='attack-enemy' onClick={() => setSpaghettiSize(spaghettiSize - 1)}>Attack Enemy</button>
@@ -53,7 +53,7 @@ function App() {
         </div>
         <div className='button-container'>
           <button className='open-button' onClick={() => {setIsOpen(true); setIsClosed(false);}}>open</button>
-          <button className='closed-button' onClick={() => {setIsOpen(false); setIsClosed(true);}}>closed</button>
+          <button className='closed-button' title='closed-button' onClick={() => {setIsOpen(false); setIsClosed(true);}}>closed</button>
         </div>
       </section>
       <section className='monster-parade'>
